@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="<?=base_url?>assets/css/style.css"/>
 </head>
 <body>
@@ -18,7 +20,7 @@
         <div class="header-content">
             <div class="logo">
                 <img src="<?=base_url?>assets/img/logo3.png" alt="tienda de Patines">
-                <a href="index.php" title="Tienda de Patines">
+                <a href="<?=base_url?>" title="Tienda de Patines">
                     Tienda de Patines
                 </a>
             </div>
@@ -35,7 +37,7 @@
         <nav class="nav">
             <ul>
                 <?php while($cat=$categorias->fetch_object()) : ?>
-                <li><a href="#"><?=$cat->nombre?></a></li>
+                <li><a href="<?=base_url?>categoria/ver&id=<?=$cat->id?>"><?=$cat->nombre?></a></li>
                 <?php endwhile; ?>
             </ul>
         </nav>  

@@ -10,7 +10,7 @@ if(isset($_SESSION['register']) && $_SESSION['register']=='complete'): ?>
 <?php endif; ?>
 <?php Utils::deleteSession('register');?>
 
-<form action="<?=base_url?>usuario/save" method="POST">
+<form action="<?=base_url?>usuario/save" method="POST" class="formGeneral">
     <label for="nombre">Nombre</label>
     <input type="text" class="formulario" name="nombre" required/>
 

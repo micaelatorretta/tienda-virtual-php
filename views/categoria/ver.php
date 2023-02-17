@@ -1,9 +1,11 @@
-        <!--Contenido Central--->
-        <div class="central">
-            <p class="titulo">
-                PRODUCTOS&nbsp;<span style="color: #EF7F3B">DESTACADOS</span>
-            </p>
-            <?php while($pro=$productos->fetch_object()) : ?>
+<?php if(isset($categoria)) : ?>
+    <div class="tituloContainer">
+        <h1><?=$categoria->nombre?></h1>
+    </div>
+    <?php if($productos->num_rows == 0) : ?>
+        <p>No hay productos para mostrar</p>
+    <?php else: ?>
+        <?php while($pro=$productos->fetch_object()) : ?>
                 <div class="product">
                     <a href="<?=base_url?>producto/ver&id=<?=$pro->id?>">
                         <img src="<?=base_url?>uploads/images/<?=$pro->imagen?>"/>
@@ -14,7 +16,7 @@
                 </div>
             <?php endwhile; ?>
 
-        </div>
-        </div>
-        
-  
+        <?php endif; ?>
+<?php else : ?>
+   <h1>La categoría no existe </h1>
+<?php endif; ?>

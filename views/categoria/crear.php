@@ -2,7 +2,7 @@
 <h1>CREAR CATEGORIA</h1>
 </div>
 
-<form action="<?=base_url?>categoria/save" method="POST">
+<form action="<?=base_url?>categoria/save" method="POST" class="formGeneral">
     <label for="nombre">Nombre</label>
     <input type="text" class="formulario" name="nombre" required/>
     

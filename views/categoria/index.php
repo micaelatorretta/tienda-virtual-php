@@ -1,5 +1,5 @@
 <div class="tituloContainer">
-<h1 class=""> Gestionar Categorias</h1>
+<h1> Gestionar Categorias</h1>
 </div>
 
 <a href="<?=base_url?>categoria/crear" class="inputButton button-small">Crear Categoria</a>
